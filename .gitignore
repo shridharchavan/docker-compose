@@ -1,0 +1,8 @@
+jellyfin/cache
+jellyfin/config
+git-compose
+git-compose.pub
+deluge/config
+owncloud/owncloud
+owncloud/postgresql
+portainer/portainer_data

@@ -1,14 +1,15 @@
 version: '3.3'
 services:
     filebrowser:
+        restart: always
         volumes:
             - '/home/ubuntu:/srv'
             - './filebrowser.db:/database/filebrowser.db'
             - './settings.json:/config/settings.json'
         environment:
-            - PUID=$(id -u)
-            - PGID=$(id -g)
-        user: 'true'
+            - 'PUID=1000'
+            - 'PGID=1000'
         ports:
             - '1010:80'
         image: 'filebrowser/filebrowser:s6'
+        network_mode: nginx
