@@ -1,0 +1,11 @@
+#docker run -d -v /srv/jellyfin/config:/config -v /srv/jellyfin/cache:/cache -v /media:/media --net=host jellyfin/jellyfin:latest
+version: '3.6'
+services:
+  jellyfin:
+    container_name: jellyfin
+    image: jellyfin/jellyfin:latest
+    network_mode: host
+    volumes:
+    - ./config:/config
+    - ./cache:/cache
+    - /home/ubuntu/Downloads:/media/downloads
