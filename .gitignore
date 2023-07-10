@@ -6,3 +6,4 @@ deluge/config
 owncloud/owncloud
 owncloud/postgresql
 portainer/portainer_data
+flame/app-data
