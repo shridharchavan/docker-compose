@@ -38,7 +38,7 @@ services:
     - postgresql
     volumes:
     - ./owncloud:/var/lib/owncloud
-    - /home/ubuntu/Downloads:/downloads
+    - /home/ubuntu/Downloads:/downloads:rw
 
   nginx:
     restart: always
